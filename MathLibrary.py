@@ -1,6 +1,16 @@
 # Math library
 # use the .listFeatures() to get a table of all functions and constants
 # Created by Arjun Sarao
+import decimal
+#===============================================================================
+def pi( prec = 10 ** 1 ):
+    decimal.getcontext().prec = prec
+    b =  decimal.Decimal(1)
+    pi = 0
+    for k in range(prec):
+        pi += ( b*4/(8*k+1) - b*2/(8*k+4) - b*1/(8*k+5) - b*1/(8*k+6)) / 16**k
+    return pi
+# Also some formula I found on the internet lmao
 #===============================================================================
 def eulersNumber():
     e = (1+(1/10000))**10000
@@ -46,7 +56,7 @@ def powers(a, x):
 def roots(a, x):
     ans = eulersNumber() ** ((1 / a) * naturalLog(x))
     return ans
-# Uses a^x = e^(x*ln(a))
+# Uses a^x = e^((1/x)*ln(a))
 #===============================================================================
 def permutations(n, r):
     perms = factorial(n) / factorial(n-r)
@@ -59,3 +69,14 @@ def combinations(n, r):
 def fibonacci(n):
     number = ((goldenRatio()**n) - ((goldenRatioInv())**n))/ roots(2,5)
     return number
+#===============================================================================
+def circleArea(r):
+    area = pi() * powers(r, 2)
+#===============================================================================
+def listFunctions():
+    print("> Calculates constants such as pi, e, and phi.")
+    print("> Can take logarithims of variable bases.")
+    print("> Calculate number of permutations and combinations")
+    print("> Returns the number at a specified index of a fibonacci series.")
+    print("> Calculates the factorial of a number")
+    print("> Can find the roots or powers of any numbers")
