@@ -5,3 +5,4 @@ A math library written in Python, really a testing ground for understanding the 
 * e is everywhere :stuck_out_tongue_winking_eye:
 * Recursion for factorial functions
 * Math is all connected.
+More in-depth documentation is provided in the TBD.
