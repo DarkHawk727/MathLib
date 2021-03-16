@@ -1,3 +1,3 @@
 # MathLib
 # Functions
-$$ 4\times 5$$
+$ 4\times 5$
