@@ -6,4 +6,4 @@ A math library written in Python, really a testing ground for understanding the 
 * Recursion for factorial functions
 * Math is all connected.
 
-  More in-depth documentation is provided in the TBD.
+More in-depth documentation is provided in the TBD.
