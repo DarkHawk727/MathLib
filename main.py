@@ -30,7 +30,7 @@ while options != -1:
     if options == 5:
         print("This function lists all the constants in this math library.")
         print("The value of Euler's Number (e) is: ", MathLibrary.eulersNumber())
-        #print("The value of pi (pi) is: ", MathLibrary.pi())
+        print("The value of pi (pi) is: ", MathLibrary.pinumber())
         print("The value of the Golden Ratio (phi) is: ", MathLibrary.goldenRatio())
         options = int(input("Please select and input from 1-XX: "))
 
@@ -63,7 +63,7 @@ while options != -1:
         options = int(input("Please select and input from 1-XX: "))
 
     if options == 10:
-        print("The value of pi is:" ,MathLibrary.pi())
+        print("The value of pi is:" ,MathLibrary.pinumber())
         options = int(input("Please select and input from 1-XX: "))
 
     if options == 11:
