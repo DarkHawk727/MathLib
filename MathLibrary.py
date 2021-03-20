@@ -1,16 +1,18 @@
 # Math library
 # use the .listFeatures() to get a table of all functions and constants
 # Created by Arjun Sarao
-import decimal
+
 #===============================================================================
-def pi( prec = 10 ** 1 ):
-    decimal.getcontext().prec = prec
-    b =  decimal.Decimal(1)
-    pi = 0
-    for k in range(prec):
-        pi += ( b*4/(8*k+1) - b*2/(8*k+4) - b*1/(8*k+5) - b*1/(8*k+6)) / 16**k
-    return pi
-# Also some formula I found on the internet lmao
+def pinumber():
+    pie = 0
+    for i in range(9999999):
+
+        if(i % 2 == 0):
+            pie += (1 / (2*i+1))
+        elif(i % 2 != 0):
+            pie -= (1 / (2*i+1))
+    return  4 * pie
+# Pretty sure this is Leibniz's formula
 #===============================================================================
 def eulersNumber():
     e = (1+(1/10000))**10000
@@ -71,7 +73,7 @@ def fibonacci(n):
     return number
 #===============================================================================
 def circleArea(r):
-    area = pi() * powers(r, 2)
+    area = pinumber() * powers(r, 2)
 #===============================================================================
 def listFunctions():
     print("> Calculates constants such as pi, e, and phi.")
