@@ -75,5 +75,5 @@ while options != -1:
         MathLibrary.circleArea(r)
         options = int(input("Please select and input from 1-XX: "))
     if options == 13:
-        n = int(input("Please enter a number n which is the number you would like to generate primes until: "))
-        MathLibrary.Sieve(n)
+        print(MathLibrary.Sieve(n))
+        options = int(input("Please select and input from 1-XX: "))
