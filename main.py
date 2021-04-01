@@ -18,13 +18,13 @@ while options != -1:
         print("This function will let you find the power of any  2 numbers.")
         a = float(input("Enter a number (a) for the base: "))
         x = float(input("Enter a number (x) for the exponent: "))
-        print("The value of ", a, "^", x, " is: ", MathLibrary.powers(a,x))
+        print("The value of ", a, "^", x, " is: ", MathLibrary.powers(a, x))
         options = int(input("Please select and input from 1-XX: "))
 
     if options == 4:
         print("This the nth number in the Fibonacci series.")
         n = int(input("Enter a an index of the series (n): "))
-        print("The ", n, "th value of the Fibonacci series is: ", int  (MathLibrary.fibonacci(n)))
+        print("The ", n, "th value of the Fibonacci series is: ", int(MathLibrary.fibonacci(n)))
         options = int(input("Please select and input from 1-XX: "))
 
     if options == 5:
@@ -45,25 +45,25 @@ while options != -1:
         print("This function will let you find the number of permutations")
         n = float(input("Enter a number (n) for the total number of objects: "))
         r = float(input("Enter a number (r) number of objects to be selected: "))
-        print("The value of ", int(n), "P", int(r), " is: ", int(MathLibrary.permutations(n,r)))
+        print("The value of ", int(n), "P", int(r), " is: ", int(MathLibrary.permutations(n, r)))
         options = int(input("Please select and input from 1-XX: "))
 
     if options == 8:
         print("This function will let you find the number of combinations")
         n = float(input("Enter a number (n) for the total number of objects: "))
         r = float(input("Enter a number (r) number of objects to be selected: "))
-        print("The value of ", int(n), "C", int(r), " is: ", int(MathLibrary.combinations(n,r)))
+        print("The value of ", int(n), "C", int(r), " is: ", int(MathLibrary.combinations(n, r)))
         options = int(input("Please select and input from 1-XX: "))
 
     if options == 9:
         print("This function will let you find the nth root of any 2 numbers.")
         a = float(input("Enter a number (a) for the index: "))
         x = float(input("Enter a number (x) for the radicand: "))
-        print("The value of the ", a, "th root of ", x, " is approximately: ", MathLibrary.roots(a,x))
+        print("The value of the ", a, "th root of ", x, " is approximately: ", MathLibrary.roots(a, x))
         options = int(input("Please select and input from 1-XX: "))
 
     if options == 10:
-        print("The value of pi is:" ,MathLibrary.pinumber())
+        print("The value of pi is:", MathLibrary.pinumber())
         options = int(input("Please select and input from 1-XX: "))
 
     if options == 11:
@@ -74,3 +74,6 @@ while options != -1:
         r = float(input("Enter a number (r) for the radius: "))
         MathLibrary.circleArea(r)
         options = int(input("Please select and input from 1-XX: "))
+    if options == 13:
+        n = int(input("Please enter a number n which is the number you would like to generate primes until: "))
+        MathLibrary.Sieve(n)
