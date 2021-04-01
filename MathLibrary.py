@@ -108,7 +108,7 @@ def Sieve(n):
         primes.append(2)
         if 3 <= n:
             primes.append(3)
-    for i in range(1, n / 6 + 1):
+    for i in range(1, int(n / 6) + 1):
         numbers.append(6 * i - 1)
         numbers.append(6 * i + 1)
     while numbers:
