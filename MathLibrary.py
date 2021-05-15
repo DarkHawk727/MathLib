@@ -7,9 +7,9 @@ def pinumber():
     pie = 0
     for i in range(9999999):
 
-        if (i % 2 == 0):
+        if i % 2 == 0:
             pie += (1 / (2 * i + 1))
-        elif (i % 2 != 0):
+        elif i % 2 != 0:
             pie -= (1 / (2 * i + 1))
     return 4 * pie
 
@@ -44,7 +44,7 @@ def logarithims(b, x):
 # Uses logb(x) = ln(x) / ln(b)
 # ===============================================================================
 def naturalLog(x):
-    ln = 10000 * (x) ** (1 / 10000) - 10000
+    ln = 10000 * x ** (1 / 10000) - 10000
     return ln
 
 
@@ -65,11 +65,10 @@ def factorial(n):
 # Recursively generates factorial
 # ===============================================================================
 def powers(a, x):
-    ans = eulersNumber() ** (a * naturalLog(x))
+    ans = a ** x
     return ans
 
 
-# Uses a^x = e^(x*ln(a))
 # ===============================================================================
 def roots(a, x):
     ans = eulersNumber() ** ((1 / a) * naturalLog(x))
@@ -127,10 +126,41 @@ def is_prime(n):
 
 
 # ===============================================================================
+def degtoRadians(n):
+    return n * (180 / pinumber())
+
+
+# ===============================================================================
+def sine(x):
+    sinx = x - (x ** 3 / factorial(3)) + (x ** 5 / factorial(5)) - (x ** 7 / factorial(7)) + (x ** 9 / factorial(9)) - (
+            x ** 11 / factorial(11))
+    return sinx
+
+
+# Uses Taylor Series Expansion for Sin(x)
+# ===============================================================================
+def cosine(x):
+    cosx = 1 - (x ** 2 / factorial(2)) + (x ** 4 / factorial(4)) - (x ** 6 / factorial(6)) + (x ** 8 / factorial(8)) - (
+            x ** 10 / factorial(10))
+    return cosx
+
+
+# Uses Taylor Series Expansion for Cos(x)
+# ===============================================================================
+def etothex(x):
+    ex = 1 + x + (x ** 2 / factorial(2)) + (x ** 3 / factorial(3)) + (x ** 4 / factorial(4)) + (
+                x ** 5 / factorial(5)) + (x ** 6 / factorial(6))+ (x ** 7 / factorial(7))+ (x ** 8 / factorial(8))
+    return ex
+
+
+# Uses Taylor Series Expansion for e^x
+# ===============================================================================
 def listFunctions():
     print("> Calculates constants such as pi, e, and phi.")
     print("> Can take logarithims of variable bases.")
-    print("> Calculate number of permutations and combinations")
+    print("> Calculate number of permutations and combinations.")
     print("> Returns the number at a specified index of a fibonacci series.")
-    print("> Calculates the factorial of a number")
-    print("> Can find the roots or powers of any numbers")
+    print("> Calculates the factorial of a number.")
+    print("> Can find the roots or powers of any numbers.")
+    print("> Find the values of sin(x), cos(x), and e^x.")
+    print("> Returns prime numbers up until a specified index.")
