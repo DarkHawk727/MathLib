@@ -35,7 +35,7 @@ while options != -1:
         options = int(input("Please select and input from 1-XX: "))
 
     if options == 6:
-        print("This function will let you find the logarithim with any base.")
+        print("This function will let you find the logarithm with any base.")
         b = float(input("Enter a number (b) for the base: "))
         x = float(input("Enter a number (x) for the exponent: "))
         print("The value of log", b, "(", x, ") is: ", MathLibrary.logarithims(b, x))
@@ -71,9 +71,35 @@ while options != -1:
         options = int(input("Please select and input from 1-XX: "))
 
     if options == 12:
+        print("Find the area of a circle with radius r.")
         r = float(input("Enter a number (r) for the radius: "))
         MathLibrary.circleArea(r)
         options = int(input("Please select and input from 1-XX: "))
+
     if options == 13:
+        print("Generate Primes up until a number n.")
+        n = int(input("Please enter a number n which is the number you would like to generate primes until: "))
         print(MathLibrary.Sieve(n))
+        options = int(input("Please select and input from 1-XX: "))
+
+    if options == 14:
+        print("Convert a degree n to radians.")
+        n = int(input("Please enter a number n which is the degree you would like to convert to radians: "))
+        print(MathLibrary.degtoRadians(n))
+        options = int(input("Please select and input from 1-XX: "))
+
+    if options == 15:
+        x = float(input("Please enter a number x which is the radian value you would like to calculate sin(x) for: "))
+        print(MathLibrary.sine(x))
+        options = int(input("Please select and input from 1-XX: "))
+
+    if options == 16:
+        x = float(input("Please enter a number x which is the radian value you would like to calculate cos(x) for: "))
+        print(MathLibrary.cosine(x))
+        options = int(input("Please select and input from 1-XX: "))
+
+    if options == 17:
+        print("Return the value of e^x.")
+        x = float(input("Please enter a number x: "))
+        print(MathLibrary.etothex(x))
         options = int(input("Please select and input from 1-XX: "))
